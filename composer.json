@@ -1,0 +1,28 @@
+{
+    "name": "jsila/animate",
+    "description": "Simple PHP wrapper around Animate.css",
+    "keywords": [
+        "Animate.css",
+        "anmations"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jernej Sila",
+            "email": "jernej.sila@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "require-dev": {
+        "mockery/mockery":"0.9.1",
+        "phpunit/phpunit":"4.1.1"
+    },
+    "autoload": {
+        "psr-0": {
+            "JSila\\Animate\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
