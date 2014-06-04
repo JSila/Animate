@@ -1,7 +1,7 @@
 Animate
 =======
 
-A simple PHP wrapper around Animate.css.
+A simple PHP wrapper around Animate.css. It generates string of classes based on which animation you specify as a method to a `Animate` class instance. For all animations please refer to [GitHub page for Animate.css](http://daneden.github.io/animate.css/).
 
 ## Installation
 
@@ -33,8 +33,6 @@ To do so, just update the `providers` array in your `app/config/app.php`:
 `AnimateServiceProvider` will also add alias for `Animate` facade.
 
 ## Usage with Laravel
-
-This package generates string of classes based on which animation you specify as a method to a `Animate` class instance. For all animations please refer to [GitHub page for Animate.css](http://daneden.github.io/animate.css/).
 
 For example, if you want `zoomIn` animation (for which the output will be `animated zoomIn`), you will get it like this:
 
