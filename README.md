@@ -58,7 +58,7 @@ Please note that last four options are CSS3 `animations` properties so specify v
 
 Each option will add another class to the class string. Some classes are already defined in `Animate.css`, some are generated dinamically and are accessible from URL which points to CSS.
 
-For example, if you want `zoomIn` animation to run infinitely and is delayed for 0.2 s than this code will do the trick:
+For example, if you want `zoomIn` animation to run infinitely and is delayed for 0.2s, than this code will do the trick:
 
 ```php
     Animate::zoomIn(['infinite' => true, 'delay' => '.2s']);
