@@ -70,7 +70,7 @@ If you use Laravel 4, that url to CSS defaults to `/css/animate_custom_classes.c
 
 Classes that are dynamically created are stored in session variable `classes`. You will first need to make an implementation of `JSila\Animate\SessionInterface` interface which is a dependency to `JSila\Animate\Animate` class (eg. `MySession`).
 
-Than you will also have to generate CSS response. `JSila\Animate\Animate` class provides `generateCSS` method, which generates CSS string of classes, but this does act as a response.
+Than you will also have to generate CSS response. `JSila\Animate\Animate` class provides `generateCSS` method, which generates CSS string of classes, but this does not act as a response.
 
 Stand-alone example:
 
