@@ -42,8 +42,8 @@ class AnimateTest extends \PHPUnit_Framework_TestCase {
     {
         $this->session->shouldReceive('put');
 
-        $actual = $this->animations->slideInDown(['delay' => '.1s']);
-        $this->assertEquals("animated slideInDown delay_1s", $actual);
+        $actual = $this->animations->slideInDown(['delay' => '.1s', 'duration' => '.1s',]);
+        $this->assertEquals("animated slideInDown duration_1s delay_1s", $actual);
     }
 
     public function testGenerateCSSWhenOptionsProvided()

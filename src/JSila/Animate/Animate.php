@@ -14,6 +14,11 @@ class Animate {
     /**
      * @var array
      */
+    private $customClasses = [];
+
+    /**
+     * @var array
+     */
     protected $animationProperties = [
         'duration',
         'delay',
@@ -66,6 +71,10 @@ class Animate {
             }
         }
 
+        if ($this->customClasses) {
+            $this->storeCustomClassesInSession();
+        }
+
         $classString = array_filter($classString, function($value)
         {
             return $value != "";
@@ -93,8 +102,9 @@ class Animate {
         if (isset($options[$animationProperty]))
         {
             $class = "$animationProperty" . str_replace('.', '_', $options[$animationProperty]);
-            $this->session->put("classes.$animationProperty.$class", $options[$animationProperty]);
-        } else
+            $this->customClasses[$animationProperty][$class] = $options[$animationProperty];
+        }
+        else
         {
             $class = "";
         }
@@ -118,5 +128,13 @@ class Animate {
         }
 
         return $css;
+    }
+
+    /**
+     * @return void
+     */
+    private function storeCustomClassesInSession()
+    {
+        $this->session->put('classes', $this->customClasses);
     }
 }
